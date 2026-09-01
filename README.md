@@ -25,8 +25,8 @@ Model, endpoint and key are set in `config/config.yaml`:
 
 ```yaml
 llm:
-  base_url: "https://api.deepseek.com/chat/completions"
-  model: "deepseek-v4-flash-vision-exp"
+  base_url: "......"
+  model: "gpt4o-mini"
   api_key: ""            # fill in here, or in config/api_key.txt
   api_key_file: "config/api_key.txt"
 ```
