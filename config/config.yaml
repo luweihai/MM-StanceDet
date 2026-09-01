@@ -1,0 +1,35 @@
+# MM-StanceDet runtime configuration.
+# All paths below are relative to the project root (i.e. this "code" directory).
+
+llm:
+  provider: "deepseek"
+  base_url: "https://api.deepseek.com/chat/completions"
+  model: "deepseek-v4-flash-vision-exp"
+  # Fill in the key here, or place it in config/api_key.txt (git-ignored).
+  api_key: ""
+  api_key_file: "config/api_key.txt"
+  temperature: 0.2
+  max_tokens: 1200
+  timeout_sec: 120
+  max_retries: 3
+
+data:
+  root: "data/stance"
+  annotations: "annotations.jsonl"
+  images_dir: "images"
+  # Which split is used to build the retrieval reference pool.
+  retrieval_split: "valid"
+  # Which split is used as the evaluation target.
+  eval_split: "test"
+
+retrieval:
+  top_k: 3
+  embed_model: "openai/clip-vit-base-patch32"
+  embedding_dim: 512
+  encoder: "clip"
+
+debate:
+  rounds: 3
+
+output:
+  dir: "outputs"
