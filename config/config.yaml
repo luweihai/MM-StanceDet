@@ -2,9 +2,9 @@
 # All paths below are relative to the project root (i.e. this "code" directory).
 
 llm:
-  provider: "deepseek"
-  base_url: "https://api.deepseek.com/chat/completions"
-  model: "deepseek-v4-flash-vision-exp"
+  provider: "xxx"
+  base_url: "......"
+  model: "gpt4o-mini"
   # Fill in the key here, or place it in config/api_key.txt (git-ignored).
   api_key: ""
   api_key_file: "config/api_key.txt"
